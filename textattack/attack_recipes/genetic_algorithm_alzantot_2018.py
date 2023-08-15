@@ -47,7 +47,7 @@ class GeneticAlgorithmAlzantot2018(AttackRecipe):
         #
         # "[We] fix the hyperparameter values to S = 60, N = 8, K = 4, and δ = 0.5"
         #
-        transformation = WordSwapMaskedLM(method="bae",max_candidates=8,masked_language_model="UBC-NLP/MARBERT")
+        transformation = WordSwapMaskedLM(method="bert-attack",max_candidates=8,masked_language_model="UBC-NLP/MARBERT")
         #
         # Don't modify the same word twice or stopwords
         #
