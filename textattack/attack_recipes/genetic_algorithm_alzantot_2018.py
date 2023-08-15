@@ -73,11 +73,11 @@ class GeneticAlgorithmAlzantot2018(AttackRecipe):
         #
         # Language Model
         #
-        constraints.append(
-            # Google1BillionWordsLanguageModel(
-            #     top_n_per_index=4, compare_against_original=False
-            # )
-        )
+        # constraints.append(
+        #     Google1BillionWordsLanguageModel(
+        #         top_n_per_index=4, compare_against_original=False
+        #     )
+        # )
         #
         # Goal is untargeted classification
         #
