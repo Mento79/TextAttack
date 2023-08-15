@@ -24,6 +24,7 @@ from textattack.constraints.semantics import WordEmbeddingDistance
 from textattack.goal_functions import UntargetedClassification
 from textattack.search_methods import AlzantotGeneticAlgorithm
 from textattack.transformations import WordSwapEmbedding
+from textattack.transformations.word_swaps import WordSwapMaskedLM
 
 from .attack_recipe import AttackRecipe
 
@@ -46,7 +47,7 @@ class GeneticAlgorithmAlzantot2018(AttackRecipe):
         #
         # "[We] fix the hyperparameter values to S = 60, N = 8, K = 4, and δ = 0.5"
         #
-        transformation = WordSwapEmbedding(max_candidates=8)
+        transformation = WordSwapMaskedLM(method="bae",max_candidates=8,masked_language_model="UBC-NLP/MARBERT")
         #
         # Don't modify the same word twice or stopwords
         #
